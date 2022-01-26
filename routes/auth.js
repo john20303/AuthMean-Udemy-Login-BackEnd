@@ -12,7 +12,7 @@ router.post('/register', [
     check('email', 'El campo email es obligatorio.').isEmail(),
     check("password", "Por favor ingrese un password al menos de  8 caracteres una mayúscula una minúscula un carácter especial y un dígito.")
     .isLength({ min: 8 })
-    .matches(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z\d@$.!%*#?&]/, ),
+    .matches(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z\d@$.!%*#?&]/, ), //Por favor ingrese un password al menos de  8 caracteres una mayúscula una minúscula un carácter especial y un dígito
     validarCampos
 ], postRegister);
 
